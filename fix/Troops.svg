@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="图层_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 500 500"
+   style="enable-background:new 0 0 500 500;"
+   xml:space="preserve"
+   sodipodi:docname="Troops.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"><metadata
+   id="metadata19"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs17" /><sodipodi:namedview
+   inkscape:document-rotation="0"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1018"
+   id="namedview15"
+   showgrid="false"
+   inkscape:zoom="1.1865252"
+   inkscape:cx="161.57594"
+   inkscape:cy="269.33637"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="图层_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{display:none;fill:none;}
+	.st1{display:none;fill:#FFFFFF;}
+</style>
+
+
+<rect
+   y="-89.336494"
+   x="-100.29285"
+   height="692.77924"
+   width="704.57837"
+   id="rect17"
+   style="fill:#ffffff;stroke-width:1.51181;stroke-linecap:round" /><g
+   id="g12">
+	<polygon
+   points="322.9,249.9 216.7,189.6 217.6,311.7  "
+   id="polygon8" />
+	<path
+   d="M353.5,0h-207L0,0v500h146.5H400l100-100V0L353.5,0z M156.7,415.2l0.9-330L443,250.9L156.7,415.2z"
+   id="path10" />
+</g>
+<polygon
+   sodipodi:insensitive="true"
+   class="st0"
+   points="252.5,-104 605,250 252.5,604 -100,250 "
+   id="polygon4"
+   style="fill:#ffffff;stroke:none" /></svg>

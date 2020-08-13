@@ -1,0 +1,40 @@
+\renewcommand{\UnitName}{Canoptek Scarab }%
+\renewcommand{\UnitPower}{4}%
+\renewcommand{\UnitIcon}{Fast-Attack.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={10}%
+\WeaponSkill(1)={4}%
+\BalisticSkill(1)={-}%
+\Strength(1)={3}%
+\Toughness(1)={3}%
+\Wounds(1)={4}%
+\Attacks(1)={4}%
+\Leadership(1)={10}%
+\Save(1)={6}%
+%
+\renewcommand{\UnitText}{6 \UnitName equiped with: \WeaponName(1).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{1}% Number of weapons to print on the card
+\WeaponName(1)={Feeder mandibles}%
+\WeaponRange(1)={\WeaponIcon{Melee.svg}}%
+\WeaponType(1)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(1)={-}%
+\WeaponAP(1)={0}%
+\WeaponDamage(1)={1}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{1}%
+\AbilityName(1)={\WeaponName(1)}%
+\AbilityDescription(1)={When resolving an attack made with this weapon, an unmodified hit roll of 6 automatically scores a hit and successfully wounds the target (do not make a wound roll).}%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, Canoptek, <Dynasty>}%
+\renewcommand{\Keywords}{Swarm, Fly, \UnitName}%
+%\newcommand{\ExtraFrontTitle}{\AbilityName(2)}%
+%\renewcommand{\ExtraFrontText}{\AbilityDescription(2)}%
+%\newcommand{\ExtraBackTitle}{\AbilityName(5)}%
+%\renewcommand{\ExtraBackText}{\AbilityDescription(5)}%
+\endinput%

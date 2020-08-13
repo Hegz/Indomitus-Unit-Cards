@@ -1,0 +1,60 @@
+\renewcommand{\UnitName}{Overlord }%
+\renewcommand{\UnitPower}{5}%
+\renewcommand{\UnitIcon}{HQ.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={5}%
+\WeaponSkill(1)={2+}%
+\BalisticSkill(1)={2+}%
+\Strength(1)={5}%
+\Toughness(1)={5}%
+\Wounds(1)={5}%
+\Attacks(1)={3}%
+\Leadership(1)={10}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{1 \UnitName equiped with: \WeaponName(1); \WeaponName(2).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{2}% Number of weapons to print on the card
+\WeaponName(1)={Tachyon arrow}%
+\WeaponRange(1)={120"}%
+\WeaponType(1)={\WeaponIcon{Assault.svg} 1}%
+\WeaponStrength(1)={12}%
+\WeaponAP(1)={-5}%
+\WeaponDamage(1)={D6}%
+%
+\WeaponName(2)={Hyperphase glaive}%
+\WeaponRange(2)={\WeaponIcon{Melee.svg}}%
+\WeaponType(2)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(2)={+2}%
+\WeaponAP(2)={-3}%
+\WeaponDamage(2)={D3}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{3}%
+\AbilityName(1)={Living Metal}%
+\AbilityDescription(1)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(2)={Phase Shifter}%
+\AbilityDescription(2)={This model has a 4+ invulnerable save.}%
+%
+\AbilityName(3)={\WeaponName(1)}%
+\AbilityDescription(3)={The bearer can only shoot with this weapon once per battle.}%
+%
+\AbilityName(4)={My Will Be Done}%
+\AbilityDescription(4)={In your Command phase , you can select one friendly \textsc{\textbf{<Dynasty>}} unit within 9" of this model. Until the start of your next Command phase, each time a model in that unit makes an attack, add 1 to the hit roll. A unit can only be selected for this ability once per phase.}%
+%
+\AbilityName(5)={Relentless March (Aura)}%
+\AbilityDescription(5)={When a \textsc{\textbf{<Dynasty>}} unit within 6" of this model is selected to make a Normal Move or an advance, add 1" to the distance it can move.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, <Dynasty>}%
+\renewcommand{\Keywords}{Infantry, Character, Noble, \UnitName}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(5)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(5)}%
+\newcommand{\ExtraBackTitle}{\AbilityName(4)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(4)}%
+\endinput%

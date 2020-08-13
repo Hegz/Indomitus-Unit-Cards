@@ -1,0 +1,79 @@
+\renewcommand{\UnitName}{Primaris Chaplain }%
+\renewcommand{\UnitPower}{4}%
+\renewcommand{\UnitIcon}{HQ.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={6}%
+\WeaponSkill(1)={2+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={4}%
+\Toughness(1)={4}%
+\Wounds(1)={5}%
+\Attacks(1)={4}%
+\Leadership(1)={9}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{1 \UnitName equiped with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{4}% Number of weapons to print on the card
+\WeaponName(1)={Absolver bolt pistol}%
+\WeaponRange(1)={18"}%
+\WeaponType(1)={\WeaponIcon{Pistol.svg} 1}%
+\WeaponStrength(1)={5}%
+\WeaponAP(1)={-1}%
+\WeaponDamage(1)={2}%
+%
+\WeaponName(2)={Cronzius arcanum}%
+\WeaponRange(2)={\WeaponIcon{Melee.svg}}%
+\WeaponType(2)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(2)={+2}%
+\WeaponAP(2)={-1}%
+\WeaponDamage(2)={2}%
+%
+\WeaponName(3)={Frag grenades}%
+\WeaponRange(3)={6"}%
+\WeaponType(3)={\WeaponIcon{Grenade.svg}D6}%
+\WeaponStrength(3)={3}%
+\WeaponAP(3)={0}%
+\WeaponDamage(3)={1}%
+%
+\WeaponName(4)={Krak grenades}%
+\WeaponRange(4)={6"}%
+\WeaponType(4)={\WeaponIcon{Grenade.svg} 1}%
+\WeaponStrength(4)={6}%
+\WeaponAP(4)={-1}%
+\WeaponDamage(4)={D3}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{4}%
+\AbilityName(1)={Angels of Death}%
+\AbilityDescription(1)={(see \textit{Codex: Space Marines})}%
+%
+\AbilityName(2)={Spiritual Leader (Aura)}%
+\AbilityDescription(2)={Friendly \textbf{\textsc{<Chapter>}} units can use this models Leadership characteristic instead of their own whilst they are within 6" of this model.}%
+%
+\AbilityName(3)={Rosarius}%
+\AbilityDescription(3)={This model has a 4+ invulnerable save.}%
+%
+\AbilityName(4)={Frag Grenades}%
+\AbilityDescription(4)={Blast}%
+%
+\AbilityName(5)={Litany of Hate (Aura)}%
+\AbilityDescription(5)={If this litany is inspiring, you can re-roll hit rolls for attacks made with melee weapons by models in friendly \textbf{\textsc{<Chapter>}} units whilst their unit is within 6" of this model.}%
+%
+\AbilityName(6)={Priest}%
+\AbilityDescription(6)={This model knows the Litany of Hate, and one litany from the Litanies of battle (see \textit{Codex: Space Marines}).  In your Command phase , if this model is on the battlefield , it can recite one litany it knows that has not already been recited by a friendly model that phase.  Roll one D6; on a 3+ the recited litany is inspiring and takes effect untill the start of your next Command phase.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Imperium, Adeptus Astartes, <Chapter>}%
+\renewcommand{\Keywords}{Infantry, Character, Primaris, Priest, Chaplain}%
+%
+% Extra card Text
+\newcommand{\ExtraFrontTitle}{\AbilityName(5)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(5)}%
+\newcommand{\ExtraBackTitle}{\AbilityName(6)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(6)}%
+\endinput%

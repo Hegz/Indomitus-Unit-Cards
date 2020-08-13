@@ -1,0 +1,54 @@
+\renewcommand{\UnitName}{Plasmancer }%
+\renewcommand{\UnitPower}{4}%
+\renewcommand{\UnitIcon}{HQ.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={5}%
+\WeaponSkill(1)={3+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={4}%
+\Toughness(1)={4}%
+\Wounds(1)={4}%
+\Attacks(1)={1}%
+\Leadership(1)={10}%
+\Save(1)={4}%
+%
+\renewcommand{\UnitText}{1 \UnitName equiped with: Plasmic lance}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{2}% Number of weapons to print on the card
+\WeaponName(1)={Plasmic Lance (shooting)}%
+\WeaponRange(1)={18"}%
+\WeaponType(1)={\WeaponIcon{Assault.svg}D3}%
+\WeaponStrength(1)={7}%
+\WeaponAP(1)={-3}%
+\WeaponDamage(1)={2}%
+%
+\WeaponName(2)={Plasmic Lance (melee)}%
+\WeaponRange(2)={\WeaponIcon{Melee.svg}}%
+\WeaponType(2)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(2)={-}%
+\WeaponAP(2)={-3}%
+\WeaponDamage(2)={2}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{1}%
+\AbilityName(1)={Living Metal}%
+\AbilityDescription(1)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(2)={Living Lightning (Aura)}%
+\AbilityDescription(2)={At the start of the Fight phase, roll one D6 for each enemy unit within 6" of this model; on a 4+, that unit suffers 1 mortal wound.}%
+%
+\AbilityName(3)={Harbringer of Destrution}%
+\AbilityDescription(3)={At the end of your Movement phase, if this model has not Advanced or Fallen Back, you can select the nearest visible enemy unit within 18".  If you do, roll three D6s; for each dice result of 4", that unit suffers 1 mortal wound.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, <Dynasty>}%
+\renewcommand{\Keywords}{Infantry, Character, Fly, Cryptek, Plasmancer}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(2)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(2)}%
+\newcommand{\ExtraBackTitle}{\AbilityName(3)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(3)}%
+\endinput%

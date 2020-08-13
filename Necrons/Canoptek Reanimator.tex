@@ -1,0 +1,51 @@
+\renewcommand{\UnitName}{Canoptek Reanimator }%
+\renewcommand{\UnitPower}{5}%
+\renewcommand{\UnitIcon}{Elites.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={8}%
+\WeaponSkill(1)={4+}%
+\BalisticSkill(1)={4+}%
+\Strength(1)={5}%
+\Toughness(1)={5}%
+\Wounds(1)={6}%
+\Attacks(1)={4}%
+\Leadership(1)={10}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{1 \UnitName equiped with: 2 \WeaponName(1)s; \WeaponName(2).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{2}% Number of weapons to print on the card
+\WeaponName(1)={Atomiser beam}%
+\WeaponRange(1)={12"}%
+\WeaponType(1)={\WeaponIcon{Assault.svg} 3}%
+\WeaponStrength(1)={6}%
+\WeaponAP(1)={-2}%
+\WeaponDamage(1)={1}%
+%
+\WeaponName(2)={Elongated claws}%
+\WeaponRange(2)={\WeaponIcon{Melee.svg}}%
+\WeaponType(2)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(2)={-}%
+\WeaponAP(2)={-2}%
+\WeaponDamage(2)={1}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{1}%
+\AbilityName(1)={Living Metal}%
+\AbilityDescription(1)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(2)={Nano-scarab Reanimation Beam}%
+\AbilityDescription(2)={In your Command phase, you can select one friendly \textsc{\textbf{<Dynasty>}} unit within 9" of this model.  If you do, until the start of your next Command phase, while that unit is within 9" of this model, add 1 to Reanimation Protocols rolls made for models in that unit}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, Canoptek, <Dynasty>}%
+\renewcommand{\Keywords}{Monster, \UnitName}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(2)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(2)}%
+%\newcommand{\ExtraBackTitle}{\AbilityName(5)}%
+%\renewcommand{\ExtraBackText}{\AbilityDescription(5)}%
+\endinput%

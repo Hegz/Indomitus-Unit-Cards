@@ -1,0 +1,77 @@
+\renewcommand{\UnitName}{Judicar }%
+\renewcommand{\UnitPower}{4}%
+\renewcommand{\UnitIcon}{Elites.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={6}%
+\WeaponSkill(1)={2+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={4}%
+\Toughness(1)={4}%
+\Wounds(1)={5}%
+\Attacks(1)={4}%
+\Leadership(1)={9}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{1 \UnitName with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{4}% Number of weapons to print on the card
+\WeaponName(1)={Absolver bolt pistol}%
+\WeaponRange(1)={18"}%
+\WeaponType(1)={\WeaponIcon{Pistol.svg} 1}%
+\WeaponStrength(1)={5}%
+\WeaponAP(1)={-1}%
+\WeaponDamage(1)={2}%
+%
+\WeaponName(2)={Executioner relic blade}%
+\WeaponRange(2)={\WeaponIcon{Melee.svg}}%
+\WeaponType(2)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(2)={+3}%
+\WeaponAP(2)={-3}%
+\WeaponDamage(2)={2}%
+%
+\WeaponName(3)={Frag grenades}%
+\WeaponRange(3)={6"}%
+\WeaponType(3)={\WeaponIcon{Grenade.svg}D6}%
+\WeaponStrength(3)={3}%
+\WeaponAP(3)={0}%
+\WeaponDamage(3)={1}%
+%
+\WeaponName(4)={Krak grenades}%
+\WeaponRange(4)={6"}%
+\WeaponType(4)={\WeaponIcon{Grenade.svg} 1}%
+\WeaponStrength(4)={6}%
+\WeaponAP(4)={-1}%
+\WeaponDamage(4)={D3}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{3}%
+\AbilityName(1)={Angels of Death}%
+\AbilityDescription(1)={(see \textit{Codex: Space Marines})}%
+%
+\AbilityName(2)={Blade Parry}%
+\AbilityDescription(2)={This model has a 4+ invulnerable save against melee weapons.}%
+%
+\AbilityName(4)={Tempermortis}%
+\AbilityDescription(4)={At the start of each Fight phase, select one enemy unit within 6" of this model.  That unit cannot fight until all other eligible units have done so.}%
+%
+\AbilityName(5)={\WeaponName(2)}%
+\AbilityDescription(5)={Each unmodified wound roll of 6 inflicts 1 mortal wound on the target in addition to any other damage.}%
+%
+\AbilityName(3)={Frag Grenades}%
+\AbilityDescription(3)={Blast}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Imperium, Adeptus Astartes, <Chapter>}%
+\renewcommand{\Keywords}{Infantry, Character, Primaris, \UnitName}%
+%
+% Extra
+\newcommand{\ExtraFrontTitle}{\AbilityName(4)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(4)}%
+\newcommand{\ExtraBackTitle}{\AbilityName(5)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(5)}%
+%
+\endinput%

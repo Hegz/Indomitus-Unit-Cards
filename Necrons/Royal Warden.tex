@@ -1,0 +1,44 @@
+\renewcommand{\UnitName}{Royal Warden }%
+\renewcommand{\UnitPower}{4}%
+\renewcommand{\UnitIcon}{HQ.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={5}%
+\WeaponSkill(1)={3+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={5}%
+\Toughness(1)={5}%
+\Wounds(1)={4}%
+\Attacks(1)={3}%
+\Leadership(1)={10}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{1 \UnitName equiped with: \WeaponName(1).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{1}% Number of weapons to print on the card
+\WeaponName(1)={Relic gauss blaster}%
+\WeaponRange(1)={24"}%
+\WeaponType(1)={\WeaponIcon{RapidFire.svg} 2}%
+\WeaponStrength(1)={5}%
+\WeaponAP(1)={-2}%
+\WeaponDamage(1)={2}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{1}%
+\AbilityName(1)={Living Metal}%
+\AbilityDescription(1)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(2)={Adaptive Stratagy}%
+\AbilityDescription(2)={In your command phase, you can select one friendly \textsc{\textbf{<Dynasty>}} unit within 9" of this model.  Until the end of your turn, that unit can Fall Back and still be seleted to shoot or charge.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, <Dynasty>}%
+\renewcommand{\Keywords}{Infantry, Character, Royal Warden}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(2)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(2)}%
+%\newcommand{\ExtraBackTitle}{\AbilityName(4)}%
+%\renewcommand{\ExtraBackText}{\AbilityDescription(4)}%
+\endinput%

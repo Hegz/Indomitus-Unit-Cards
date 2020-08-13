@@ -1,0 +1,287 @@
+%\documentclass[parskip,letterpaper]{scrartcl}
+\documentclass[parskip,letterpaper]{article}
+\usepackage[top=7mm,bottom=0mm,left=6.5mm,right=0mm,landscape]{geometry}
+\setlength{\parindent}{0cm}
+
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
+\usepackage[sfdefault,condensed]{roboto}  
+\usepackage[T1]{fontenc}
+\usepackage{svg}
+\svgpath{{40k-Data-Card/src/svg/}}
+
+\usepackage{moresize}
+\usepackage{setspace}
+\usepackage{graphbox}
+\usepackage{tabulary}
+\usepackage{tabularx}
+\usepackage{arrayjob}
+\usepackage{multido}
+\usepackage{array}
+\newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
+
+\pgfmathsetmacro{\cardroundingradius}{3mm}
+\pgfmathsetmacro{\cardwidth}{6.6}
+\pgfmathsetmacro{\cardheight}{9.2}
+\pgfmathsetmacro{\textpadding}{0.2}
+\pgfmathsetmacro{\ruleheight}{0.08}
+\newcommand{\cellwidth}{2.66mm}
+\newcommand{\Wcellwidth}{5mm}
+\newcommand{\Namefontsize}{\raggedright\bfseries\fontsize{16.5}{1}}
+\newcommand{\textfontsize}{\footnotesize\setstretch{1}}
+\newcommand{\weaponfontsize}{\footnotesize}
+\newcommand{\statfontsize}{\normalsize}
+\newcommand{\weaponiconsize}{2.4mm}
+\newcommand{\useicons}{}
+\newcommand{\seperatorline}{\tikz{\fill (0,0) rectangle (\cardwidth-\textpadding*2,\ruleheight);}\\}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+\newcommand{\printdummycard}{
+	\begin{tikzpicture}%
+	%Card frame
+    \draw[rounded corners=\cardroundingradius, ultra thin] (0,0) rectangle (\cardwidth,\cardheight);
+    \end{tikzpicture}}
+    
+\newcommand{\StatIcon}[1]{
+        \begin{minipage}[c]{\cellwidth}
+          \vspace{1pt}
+                    \centering
+          \includesvg[height=3.5mm]{#1}
+        \end{minipage}%
+}
+
+\newcommand{\WeaponIcon}[1]{
+        \begin{minipage}[c]{\Wcellwidth}
+          \vspace{1pt}
+          \centering
+          \includesvg[height=3mm]{#1}
+        \end{minipage}%
+}
+
+\newcommand{\WeaponText}[1]{
+        \begin{minipage}[c]{20.4mm}
+          \vspace{3pt}
+          \centering
+          {#1}
+        \end{minipage}%
+}
+\newcommand{\printcardfront}{
+	\begin{tikzpicture}%
+	%Card frame
+    \draw[rounded corners=\cardroundingradius, ultra thin] (0,0) rectangle (\cardwidth,\cardheight);
+    
+	%Card Heading
+    \node[text width=(\cardwidth-\textpadding*2)*1cm,below right,inner sep=0] at (0.5mm,\cardheight-\textpadding){ 
+        \begin{minipage}[t]{1cm}
+          \vspace{0pt}
+          \includesvg[height=10mm]{\UnitIcon}
+        \end{minipage}%
+        \begin{minipage}[t]{6.3cm}
+          \vspace{7pt}
+          {\Namefontsize\textsc{\UnitName}}
+        \end{minipage}};
+        
+    %Card Text body
+    \node[text width=(\cardwidth-\textpadding)*1cm,below right,inner sep=0] at (\textpadding,\cardheight-1.1){
+        \seperatorline
+        \textfontsize
+        {\rowcolors{2}{gray!15}{}
+        % Unit stat block
+%        \tymin=8pt
+%\tymax=60pt
+		\statfontsize
+        \begin{tabular}{M{\cellwidth} M{\cellwidth} M{\cellwidth} M{\cellwidth} M{\cellwidth} M{\cellwidth} M{\cellwidth} M{\cellwidth} M{\cellwidth} N}%
+	       	\rowcolor{gray!30}
+	       	\ifdefined\useicons
+	       	\StatIcon{Move.svg} & \StatIcon{WeaponSkill.svg} &
+	       	\StatIcon{BallisticSkill.svg} & \StatIcon{Strength.svg} & 
+	       	\StatIcon{Toughness.svg} & \StatIcon{Wounds.svg} & 
+	       	\StatIcon{Attacks.svg} & \StatIcon{Leadership.svg} & 
+	       	\StatIcon{Save.svg} \\[2pt]
+	       	\else
+	       	\rowstyle{\bfseries}M & Ws & Bs & S & T & W & A & Ld & Sv\\%
+	       	\fi
+	        \let\StatList\empty%
+	        \begingroup%
+	        	\let\Movement\relax%
+	        	\let\WeaponSkill\relax%
+	        	\let\BalisticSkill\relax%
+	        	\let\Strength\relax%
+	        	\let\Toughness\relax%
+	        	\let\Wounds\relax%
+	        	\let\Attacks\relax%
+	        	\let\Leadership\relax%
+	        	\let\Save\relax%
+	        	\let\\\relax%
+	        	\multido{\i=1+1}{\StatBlocks}{%
+					\xdef\StatList{\StatList%
+					\Movement(\i)" & \WeaponSkill(\i) & \BalisticSkill(\i) & \Strength(\i) & %
+					\Toughness(\i) & \Wounds(\i) & \Attacks(\i) & \Leadership(\i) & \Save(\i)+\\}%
+				}
+			\endgroup%
+		    \StatList%
+			%\hline%
+	    \end{tabular}}
+	    \seperatorline
+	    \textfontsize
+	    % Unit Text Block
+	    \hfill\begin{minipage}{\dimexpr\textwidth-2mm}
+        \vspace{2pt}
+	    \UnitText
+        \vspace{2pt}
+		\end{minipage}
+        % Weapon profile Block
+        {\rowcolors{2}{gray!15}{white}
+		\weaponfontsize
+		\setlength{\tabcolsep}{1.5pt}
+        \begin{tabular}{m{25.4mm} M{\Wcellwidth} M{10mm} M{\Wcellwidth} M{\Wcellwidth} M{\Wcellwidth} N }
+	        \rowcolor{gray!30} 
+	        \ifdefined\useicons
+ 			\bfseries\WeaponText{Weapon} & \WeaponIcon{Range.svg} & \WeaponIcon{Type.svg} & \WeaponIcon{Strength.svg} & 
+ 			\WeaponIcon{ArmourPenetration.svg} & \WeaponIcon{Damage.svg} \\[2pt]
+	       	\else
+	       	\rowstyle{\bfseries} Weapon & R & Type & S & AP & D \\
+	       	\fi
+	        \let\ListWeapon\empty
+	        \begingroup
+	        	\let\WeaponName\relax
+	        	\let\WeaponRange\relax
+	        	\let\WeaponType\relax
+	        	\let\WeaponStrength\relax
+	        	\let\WeaponAP\relax
+	        	\let\WeaponDamage\relax
+	        	\let\\\relax
+	        	\let\rowstyle\relax
+	        	\let\tiny\relax
+	        	\multido{\i=1+1}{\NumWeapon}{%
+					\xdef\ListWeapon{\ListWeapon%
+					\WeaponName(\i) & \WeaponRange(\i) & \WeaponType(\i) &%
+					\WeaponStrength(\i) & \WeaponAP(\i) & \WeaponDamage(\i) \\[2pt]}%
+				}
+			\endgroup%
+			
+		    \ListWeapon%
+	    \end{tabular}}
+	    \textfontsize
+        \seperatorline
+        %Extra Text
+        \ifdefined\ExtraFrontTitle
+        \textfontsize
+		\colorbox{gray!30}{\strut \makebox[\dimexpr \linewidth-4\fboxsep][l]{\textsc{\normalsize \ExtraFrontTitle}}}
+		\begin{minipage}[c]{2mm}{\hfill}\end{minipage}%
+	    \begin{minipage}[c]{\dimexpr\textwidth-4mm}{
+	    \textfontsize
+	    \vspace{1pt}
+	    \ExtraFrontText
+	    }
+	    \end{minipage}
+		\fi
+	};
+        % Keywords
+        \node[text width=(\cardwidth-\textpadding)*1cm,right,inner sep=-2] at (\textpadding,\cardheight-8.5){
+        \begin{center}
+        
+        	\setstretch{.65}
+        	\textbf{\textsc{\statfontsize \Keywords}}
+        \end{center}
+    };
+\end{tikzpicture}}
+\newcommand{\printcardback}{
+	\begin{tikzpicture}
+	%Card frame
+    \draw[rounded corners=\cardroundingradius] (0,0) rectangle (\cardwidth,\cardheight);
+    
+    %Card Text body
+    \node[text width=(\cardwidth-\textpadding*2)*1cm,below right,inner sep=0] at (\textpadding,\cardheight-0.3){
+        \textfontsize
+	    % Abilities Block
+	    \colorbox{gray!30}{\strut\makebox[\dimexpr \linewidth-5\fboxsep][l]{\textsc{\large Abilites}}}
+	    \begin{minipage}[c]{2mm}{\hfill}\end{minipage}%
+	    \hfill\begin{minipage}{\dimexpr\textwidth-2mm}
+	    \vspace{1pt}
+		\begin{description}
+		    \setlength\itemsep{-1mm}
+			\multido{\i=1+1}{\NumAbilities}{%
+			\item[\AbilityName(\i)] : \AbilityDescription(\i)}
+		\end{description}
+		\vspace{1pt}
+		\end{minipage}
+		\seperatorline
+		%Extra Text
+        \ifdefined\ExtraBackTitle
+		\colorbox{gray!30}{\strut\makebox[\dimexpr \linewidth-2\fboxsep][l]{\textsc{\large \ExtraBackTitle}}}
+		\begin{minipage}[c]{2mm}{\hfill}\end{minipage}%
+	    \hfill\begin{minipage}{\dimexpr\textwidth-2mm}
+	    \textfontsize
+	    \vspace{3pt}
+	    \ExtraBackText
+	    \end{minipage}
+		\fi
+    };
+        % Faction Keywords
+        \node[text width=(\cardwidth-\textpadding)*1cm,right,inner sep=-2] at (\textpadding,\cardheight-8.5)
+        {
+        \begin{center}
+        	\setstretch{.65}
+        	\textbf{\textsc{\statfontsize	\FactionKeywords}}
+        \end{center}
+    	};
+    	\node[star,star points=7,star point ratio=0.7, fill=gray!20, draw=black, very thick] at (\cardwidth-0.65,\cardheight-.65) {\LARGE \UnitPower};
+\end{tikzpicture}}
+
+
+
+\newarray\Movement
+\newarray\WeaponSkill
+\newarray\BalisticSkill
+\newarray\Strength
+\newarray\Toughness
+\newarray\Wounds
+\newarray\Attacks
+\newarray\Leadership
+\newarray\Save
+
+\newarray\WeaponName
+\newarray\WeaponRange
+\newarray\WeaponType
+\newarray\WeaponStrength
+\newarray\WeaponAP
+\newarray\WeaponDamage
+
+\newarray\AbilityName
+\newarray\AbilityDescription
+
+\newcommand{\UnitName}{}
+\newcommand{\UnitPower}{}
+\newcommand{\StatBlocks}{}
+\newcommand{\UnitText}{}
+\newcommand{\NumWeapon}{}
+\newcommand{\UnitIcon}{}
+\newcommand{\FactionKeywords}{}
+\newcommand{\Keywords}{}
+\newcommand{\NumAbilities}{}
+\newcommand{\ExtraFrontTitle}{}
+\let\ExtraFrontTitle\undefined
+\newcommand{\ExtraFrontText}{}
+\newcommand{\ExtraBackTitle}{}
+\let\ExtraBackTitle\undefined
+\newcommand{\ExtraBackText}{}
+
+\begin{document}
+\begin{flushleft}
+\let\ExtraFrontTitle\undefined
+\let\ExtraBackTitle\undefined
+%\input{"Primaris Captain.tex"}%
+%\printcardfront
+\input{Space Marines.tex}%
+\cleardoublepage
+\input{Necrons.tex}%
+\end{flushleft}
+\end{document}

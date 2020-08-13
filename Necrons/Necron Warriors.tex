@@ -1,0 +1,51 @@
+\renewcommand{\UnitName}{Necron Warriors }%
+\renewcommand{\UnitPower}{10}%
+\renewcommand{\UnitIcon}{Troops.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={5}%
+\WeaponSkill(1)={3+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={4}%
+\Toughness(1)={4}%
+\Wounds(1)={1}%
+\Attacks(1)={1}%
+\Leadership(1)={10}%
+\Save(1)={4}%
+%
+\renewcommand{\UnitText}{20 \UnitName equiped with: \WeaponName(1) or \WeaponName(2).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{2}% Number of weapons to print on the card
+\WeaponName(1)={Gauss flayer}%
+\WeaponRange(1)={24"}%
+\WeaponType(1)={\WeaponIcon{RapidFire.svg} 1}%
+\WeaponStrength(1)={4}%
+\WeaponAP(1)={-1}%
+\WeaponDamage(1)={1}%
+%
+\WeaponName(2)={Gauss reaper}%
+\WeaponRange(2)={14"}%
+\WeaponType(2)={\WeaponIcon{RapidFire.svg} 1}%
+\WeaponStrength(2)={5}%
+\WeaponAP(2)={-2}%
+\WeaponDamage(2)={1}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{1}%
+\AbilityName(1)={Reanimation Protocols}%
+\AbilityDescription(1)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(2)={Their Number is Legion}%
+\AbilityDescription(2)={Re-roll Reanimation Protocol rolls of 1 for models in this unit.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, <Dynasty>}%
+\renewcommand{\Keywords}{Infantry, \UnitName}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(2)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(2)}%
+%\newcommand{\ExtraBackTitle}{\AbilityName(5)}%
+%\renewcommand{\ExtraBackText}{\AbilityDescription(5)}%
+\endinput%

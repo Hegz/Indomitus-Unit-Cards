@@ -1,0 +1,57 @@
+\renewcommand{\UnitName}{Eradicators }%
+\renewcommand{\UnitPower}{5}%
+\renewcommand{\UnitIcon}{Heavy-Support.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{2}% Number of stat blocks to print on the card
+\Movement(1)={5}%
+\WeaponSkill(1)={3+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={4}%
+\Toughness(1)={5}%
+\Wounds(1)={3}%
+\Attacks(1)={2}%
+\Leadership(1)={7}%
+\Save(1)={3}%
+%
+\Movement(2)={5}%
+\WeaponSkill(2)={3+}%
+\BalisticSkill(2)={3+}%
+\Strength(2)={4}%
+\Toughness(2)={5}%
+\Wounds(2)={3}%
+\Attacks(2)={3}%
+\Leadership(2)={8}%
+\Save(2)={3}%
+\renewcommand{\UnitText}{2 \UnitName and 1 Sergent.  Each model is equiped with: \WeaponName(1); \WeaponName(2).}%
+%
+% Unit weapon profiles
+\renewcommand{\NumWeapon}{2}% Number of weapons to print on the card
+\WeaponName(1)={Bolt pistol}%
+\WeaponRange(1)={12"}%
+\WeaponType(1)={\WeaponIcon{Pistol.svg} 1}%
+\WeaponStrength(1)={4}%
+\WeaponAP(1)={0}%
+\WeaponDamage(1)={1}%
+%
+\WeaponName(2)={Melta rifle}%
+\WeaponRange(2)={24"}%
+\WeaponType(2)={\WeaponIcon{Assault.svg} 1}%
+\WeaponStrength(2)={8}%
+\WeaponAP(2)={-4}%
+\WeaponDamage(2)={D6}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{1}%
+\AbilityName(1)={Angels of Death}%
+\AbilityDescription(1)={(see \textit{Codex: Space Marines})}%
+%
+\AbilityName(2)={Total Obliteration}%
+\AbilityDescription(2)={In your Shooting phase, you can declare this unit will only shoot a single target.  If you do, select one target unit for this unit; models in this unit can shoot twice this phase, but they can only target that enemy unit.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Imperium, Adeptus Astartes, <Chapter>}%
+\renewcommand{\Keywords}{Infantry, Mk X Gravis, Primaris, Eradicator Squad}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(2)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(2)}%
+\endinput%

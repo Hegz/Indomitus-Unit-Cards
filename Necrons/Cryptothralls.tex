@@ -1,0 +1,60 @@
+\renewcommand{\UnitName}{Cryptothralls }%
+\renewcommand{\UnitPower}{2}%
+\renewcommand{\UnitIcon}{Elites.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={5}%
+\WeaponSkill(1)={4+}%
+\BalisticSkill(1)={4+}%
+\Strength(1)={5}%
+\Toughness(1)={5}%
+\Wounds(1)={2}%
+\Attacks(1)={3}%
+\Leadership(1)={10}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{2 \UnitName equiped with: \WeaponName(1); \WeaponName(2).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{2}% Number of weapons to print on the card
+\WeaponName(1)={Scouring eye}%
+\WeaponRange(1)={12"}%
+\WeaponType(1)={\WeaponIcon{Pistol.svg} 2}%
+\WeaponStrength(1)={5}%
+\WeaponAP(1)={-2}%
+\WeaponDamage(1)={1}%
+%
+\WeaponName(2)={Scythed Limbs}%
+\WeaponRange(2)={\WeaponIcon{Melee.svg}}%
+\WeaponType(2)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(2)={-}%
+\WeaponAP(2)={-1}%
+\WeaponDamage(2)={1}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{3}%
+\AbilityName(1)={Living Metal}%
+\AbilityDescription(1)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(2)={Reanimation Protocols}%
+\AbilityDescription(2)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(3)={Bound Creation}%
+\AbilityDescription(3)={In a Battle-forged army, you can include one \textsc{\textbf{\UnitName}} unit in a Detachment for each \textsc{\textbf{Cryptek}} unit in that Detachment (\textsc{\textbf{\UnitName}} units do not take up slots in the Detachment).}%
+%
+\AbilityName(4)={Protectors (Aura)}%
+\AbilityDescription(4)={Enemy models cannot target a \textsc{\textbf{Cryptek}} unit from your army with a ranged weapon whilst it is within 3" of a friendly \textsc{\textbf{\UnitName}} unit.}%
+%
+\AbilityName(5)={Systematic Vigour}%
+\AbilityDescription(5)={Models in this unit change their Weapon Skill and Balistic Skill characteristics to 3+ and their Attacks to 6 whilst this unit is within 6" of a friendly \textsc{\textbf{Cryptek}}.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, Canoptek, <Dynasty>}%
+\renewcommand{\Keywords}{Infantry, \UnitName}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(4)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(4)}%
+\newcommand{\ExtraBackTitle}{\AbilityName(5)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(5)}%
+\endinput%

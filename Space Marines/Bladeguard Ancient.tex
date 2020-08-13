@@ -1,0 +1,62 @@
+\renewcommand{\UnitName}{Bladeguard Ancient }%
+\renewcommand{\UnitPower}{5}%
+\renewcommand{\UnitIcon}{Elites.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={6}%
+\WeaponSkill(1)={3+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={4}%
+\Toughness(1)={4}%
+\Wounds(1)={5}%
+\Attacks(1)={4}%
+\Leadership(1)={9}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{1 \UnitName equiped with: \WeaponName(1); \WeaponName(2); \WeaponName(3).}%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{3}% Number of weapons to print on the card
+\WeaponName(1)={Heavy bolt pistol}%
+\WeaponRange(1)={18"}%
+\WeaponType(1)={\WeaponIcon{Pistol.svg} 1}%
+\WeaponStrength(1)={4}%
+\WeaponAP(1)={-1}%
+\WeaponDamage(1)={1}%
+%
+\WeaponName(2)={Frag Grenades}%
+\WeaponRange(2)={6"}%
+\WeaponType(2)={\WeaponIcon{Grenade.svg}D6}%
+\WeaponStrength(2)={3}%
+\WeaponAP(2)={0}%
+\WeaponDamage(2)={1}%
+%
+\WeaponName(3)={Krak Grenades}%
+\WeaponRange(3)={6"}%
+\WeaponType(3)={\WeaponIcon{Grenade.svg} 1}%
+\WeaponStrength(3)={6}%
+\WeaponAP(3)={-1}%
+\WeaponDamage(3)={D3}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{1}%
+\AbilityName(1)={Angels of Death}%
+\AbilityDescription(1)={(see \textit{Codex: Space Marines})}%
+%
+\AbilityName(2)={Deeds of Heroism (Aura)}%
+\AbilityDescription(2)={Add 1 to hit rolls for attacks made by friendly \textbf{\textsc{<Chapter> Bladeguard}} models whilst their unit is within 6" of this model.}%
+%
+\AbilityName(3)={Astartes Banner (Aura)}%
+\AbilityDescription(3)={Add 1 to the Leadership characteristic of models in friendly \textbf{\textsc{<Chapter>}} units whilst their unit is within 6" of this model.  In addition, roll one D6 each time a model in such a unit (excluding \textbf{\textsc{Vehicle, Beast}} and \textbf{\textsc{Wulfen}} model) is destroyed by an attack made by an enemy model.  on a 4+, do not remove the destroyed model from the battlefiedl - it can, after the attacking models' unit has finished making its attacks, either shoot with one of its ranged weapons as if it were your Shooting phase, or make one attack with one of its melee weapons as if it were the Fight phase.  After resolving these attacks, the destroyed model is then removed.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Imperium, Adeptus Astartes, <Chapter>}%
+\renewcommand{\Keywords}{Infantry, Character, Primaris, Bladeguard, \UnitName}%
+%
+% Extra
+\newcommand{\ExtraFrontTitle}{\AbilityName(2)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(2)}%
+\newcommand{\ExtraBackTitle}{\AbilityName(3)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(3)}%
+\endinput%

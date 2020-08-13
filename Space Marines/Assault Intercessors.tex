@@ -1,0 +1,95 @@
+\renewcommand{\UnitName}{Assault Intercessors }%
+\renewcommand{\UnitPower}{10}%
+\renewcommand{\UnitIcon}{Troops.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{2}% Number of stat blocks to print on the card
+\Movement(1)={5}%
+\WeaponSkill(1)={3+}%
+\BalisticSkill(1)={3+}%
+\Strength(1)={4}%
+\Toughness(1)={4}%
+\Wounds(1)={2}%
+\Attacks(1)={2}%
+\Leadership(1)={7}%
+\Save(1)={3}%
+%
+\Movement(2)={5}%
+\WeaponSkill(2)={3+}%
+\BalisticSkill(2)={3+}%
+\Strength(2)={4}%
+\Toughness(2)={4}%
+\Wounds(2)={2}%
+\Attacks(2)={3}%
+\Leadership(2)={8}%
+\Save(2)={3}%
+\renewcommand{\UnitText}{9 \UnitName and 1 Sergeant.  Each model is equiped with: \WeaponName(1); \WeaponName(4); \WeaponName(5); \WeaponName(6).}%
+%
+% Unit weapon profiles
+\renewcommand{\NumWeapon}{6}% Number of weapons to print on the card
+\WeaponName(1)={Heavy bolt pistol}%
+\WeaponRange(1)={18"}%
+\WeaponType(1)={\WeaponIcon{Pistol.svg} 1}%
+\WeaponStrength(1)={4}%
+\WeaponAP(1)={-1}%
+\WeaponDamage(1)={1}%
+%
+\WeaponName(2)={Plasma pistol -Standard}%
+\WeaponRange(2)={12"}%
+\WeaponType(2)={\WeaponIcon{Pistol.svg} 1}%
+\WeaponStrength(2)={7}%
+\WeaponAP(2)={-3}%
+\WeaponDamage(2)={1}%
+%
+\WeaponName(3)={Plasma pistol -Supercharge}%
+\WeaponRange(3)={12"}%
+\WeaponType(3)={\WeaponIcon{Pistol.svg} 1}%
+\WeaponStrength(3)={8}%
+\WeaponAP(3)={-3}%
+\WeaponDamage(3)={2}%
+%
+\WeaponName(4)={Astartes chanisword}%
+\WeaponRange(4)={\WeaponIcon{Melee.svg}}%
+\WeaponType(4)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(4)={-}%
+\WeaponAP(4)={-1}%
+\WeaponDamage(4)={1}%
+%
+\WeaponName(5)={Frag grenades}%
+\WeaponRange(5)={6"}%
+\WeaponType(5)={\WeaponIcon{Grenade.svg}D6}%
+\WeaponStrength(5)={3}%
+\WeaponAP(5)={0}%
+\WeaponDamage(5)={1}%
+%
+\WeaponName(6)={Krak grenades}%
+\WeaponRange(6)={6"}%
+\WeaponType(6)={\WeaponIcon{Grenade.svg} 1}%
+\WeaponStrength(6)={6}%
+\WeaponAP(6)={-1}%
+\WeaponDamage(6)={D3}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{4}%
+\AbilityName(1)={Angels of Death}%
+\AbilityDescription(1)={(see \textit{Codex: Space Marines})}%
+%
+\AbilityName(5)={Combat Squads}%
+\AbilityDescription(5)={If this unit contains 10 models, then during deployment, before any units have been setup, it can be divided into two units of 5 models.}%
+%
+\AbilityName(2)={Supercharge}%
+\AbilityDescription(2)={On an unmodified roll of 1, the bearer is destroyed after shooting.}%
+%
+\AbilityName(3)={\WeaponName(4)}%
+\AbilityDescription(3)={When the bearer fights, it makes 1 additional attack with this weapon.}%
+%
+\AbilityName(4)={Frag Grenades}%
+\AbilityDescription(4)={Blast}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Imperium, Adeptus Astartes, <Chapter>}%
+\renewcommand{\Keywords}{Infantry, Primaris, Assault Intercessor Squad}%
+%
+\newcommand{\ExtraBackTitle}{\AbilityName(5)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(5)}%
+\endinput%

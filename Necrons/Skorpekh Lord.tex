@@ -1,0 +1,73 @@
+\renewcommand{\UnitName}{Skorpekh Lord }%
+\renewcommand{\UnitPower}{7}%
+\renewcommand{\UnitIcon}{HQ.svg}%
+%
+% Unit Stat block(s)
+\renewcommand{\StatBlocks}{1}% Number of stat blocks to print on the card
+\Movement(1)={8}%
+\WeaponSkill(1)={2+}%
+\BalisticSkill(1)={2+}%
+\Strength(1)={6}%
+\Toughness(1)={6}%
+\Wounds(1)={6}%
+\Attacks(1)={4}%
+\Leadership(1)={10}%
+\Save(1)={3}%
+%
+\renewcommand{\UnitText}{1 \UnitName equiped with: \WeaponName(1), \WeaponName(2), \WeaponName(3).}%
+%
+% Unit weapon profiles
+%
+\renewcommand{\NumWeapon}{3}% Number of weapons to print on the card
+\WeaponName(1)={Enmitic annihilator}%
+\WeaponRange(1)={18"}%
+\WeaponType(1)={\WeaponIcon{Assault.svg}2D3}%
+\WeaponStrength(1)={6}%
+\WeaponAP(1)={-1}%
+\WeaponDamage(1)={1}%
+%
+\WeaponName(2)={Flensing claw}%
+\WeaponRange(2)={\WeaponIcon{Melee.svg}}%
+\WeaponType(2)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(2)={-}%
+\WeaponAP(2)={-1}%
+\WeaponDamage(2)={1}%
+%
+\WeaponName(3)={Hyperphase harvester}%
+\WeaponRange(3)={\WeaponIcon{Melee.svg}}%
+\WeaponType(3)={\WeaponIcon{Melee.svg}}%
+\WeaponStrength(3)={+2}%
+\WeaponAP(3)={-4}%
+\WeaponDamage(3)={3}%
+%
+% Abilities
+\renewcommand{\NumAbilities}{5}%
+\AbilityName(1)={Living Metal}%
+\AbilityDescription(1)={(see \textit{Codex: Necrons})}%
+%
+\AbilityName(2)={Phase shifter}%
+\AbilityDescription(2)={This model has a 4+ invulnerable save.}%
+%
+\AbilityName(3)={\WeaponName(1)}%
+\AbilityDescription(3)={Blast}%
+%
+\AbilityName(4)={\WeaponName(2)}%
+\AbilityDescription(4)={Make 2 hit rolls instead of 1 for each attak made with this weapon.}%
+%
+\AbilityName(5)={\WeaponName(3)}%
+\AbilityDescription(5)={When resolving an attack with this weapon, subtract 1 from the hit roll.}%
+%
+\AbilityName(6)={United in Destruction (Aura)}%
+\AbilityDescription(6)={Re-roll rolls of 1 for attacks made by models in friendly \textsc{\textbf{<Dynasty> Destroyer Cult}} units whilst their unit is within 6" of this model.}%
+%
+\AbilityName(7)={Hardwired for Destruction}%
+\AbilityDescription(7)={Re-roll hit rolls of 1 for attacks made by this modell.}%
+%
+% Keywords
+\renewcommand{\FactionKeywords}{Necrons, Destroyer Cult, <Dynasty>}%
+\renewcommand{\Keywords}{Infantry, Character, \UnitName}%
+\newcommand{\ExtraFrontTitle}{\AbilityName(6)}%
+\renewcommand{\ExtraFrontText}{\AbilityDescription(6)}%
+\newcommand{\ExtraBackTitle}{\AbilityName(7)}%
+\renewcommand{\ExtraBackText}{\AbilityDescription(7)}%
+\endinput%
