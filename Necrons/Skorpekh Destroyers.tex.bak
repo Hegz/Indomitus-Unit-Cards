@@ -24,7 +24,7 @@
 \Leadership(2)={10}%
 \Save(2)={4}%
 %
-\renewcommand{\UnitText}{3 \UnitName\space and 1 Plasmacyte. One Skorpekh Destroyer in this unit is equipped with: \WeaponName(1). Every other Skorpekh Destroyer in this unit is equipped with \WeaponName(2). A Plasmacyte is equipped with \WeaponName(3).}%
+\renewcommand{\UnitText}{3 \UnitName\space and 1 Plasmacyte. One Skorpekh Destroyer in this unit is equiped with: \WeaponName(1). Every other Skorpekh Destroyer in this unit is equiped with \WeaponName(2). A Plasmacyte is equiped with \WeaponName(3).}%
 %
 % Unit weapon profiles
 %

@@ -14,7 +14,7 @@
 \Leadership(1)={10}%
 \Save(1)={3}%
 %
-\renewcommand{\UnitText}{1 \UnitName equipped with: \WeaponName(1).}%
+\renewcommand{\UnitText}{1 \UnitName equiped with: \WeaponName(1).}%
 %
 % Unit weapon profiles
 %
@@ -31,8 +31,8 @@
 \AbilityName(1)={Living Metal}%
 \AbilityDescription(1)={(see \textit{Codex: Necrons})}%
 %
-\AbilityName(2)={Adaptive Strategy}%
-\AbilityDescription(2)={In your command phase, you can select one friendly \textsc{\textbf{<Dynasty>}} unit within 9" of this model.  Until the end of your turn, that unit can Fall Back and still be selected to shoot or charge.}%
+\AbilityName(2)={Adaptive Stratagy}%
+\AbilityDescription(2)={In your command phase, you can select one friendly \textsc{\textbf{<Dynasty>}} unit within 9" of this model.  Until the end of your turn, that unit can Fall Back and still be seleted to shoot or charge.}%
 %
 % Keywords
 \renewcommand{\FactionKeywords}{Necrons, <Dynasty>}%

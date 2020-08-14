@@ -14,12 +14,12 @@
 \Leadership(1)={10}%
 \Save(1)={3}%
 %
-\renewcommand{\UnitText}{1 \UnitName equipped with: 2 \WeaponName(1)s; \WeaponName(2).}%
+\renewcommand{\UnitText}{1 \UnitName equiped with: 2 \WeaponName(1)s; \WeaponName(2).}%
 %
 % Unit weapon profiles
 %
 \renewcommand{\NumWeapon}{2}% Number of weapons to print on the card
-\WeaponName(1)={Atomizer beam}%
+\WeaponName(1)={Atomiser beam}%
 \WeaponRange(1)={12"}%
 \WeaponType(1)={\WeaponIcon{Assault.svg} 3}%
 \WeaponStrength(1)={6}%

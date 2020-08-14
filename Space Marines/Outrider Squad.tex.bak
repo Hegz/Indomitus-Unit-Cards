@@ -23,7 +23,7 @@
 \Attacks(2)={3}%
 \Leadership(2)={8}%
 \Save(2)={3}%
-\renewcommand{\UnitText}{2 Outriders and 1 Sergeant.  Every model is equipped with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4); \WeaponName(5).}%
+\renewcommand{\UnitText}{2 Outriders and 1 Sergent.  Every model is equiped with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4); \WeaponName(5).}%
 %
 % Unit weapon profiles
 \renewcommand{\NumWeapon}{5}% Number of weapons to print on the card
@@ -67,7 +67,7 @@
 \AbilityName(1)={Angels of Death}%
 \AbilityDescription(1)={(see \textit{Codex: Space Marines})}%
 %
-\AbilityName(5)={Devastating Charge}%
+\AbilityName(5)={Devistating Charge}%
 \AbilityDescription(5)={If this unit makes a charge move, add 2 to the Attacks characteristic of models in this unit until the end of the turn.}%
 %
 \AbilityName(4)={Turbo-boost}%

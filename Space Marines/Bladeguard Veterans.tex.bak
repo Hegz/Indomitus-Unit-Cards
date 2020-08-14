@@ -24,7 +24,7 @@
 \Leadership(2)={9}%
 \Save(2)={3}%
 %
-\renewcommand{\UnitText}{2 \UnitName and 1 Sergeant. Each model is equipped with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4); and \AbilityName(3).}%
+\renewcommand{\UnitText}{2 \UnitName and 1 Sergeant. Each model is equiped with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4); and \AbilityName(3).}%
 % Unit weapon profiles
 %
 \renewcommand{\NumWeapon}{4}% Number of weapons to print on the card

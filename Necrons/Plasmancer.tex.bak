@@ -14,7 +14,7 @@
 \Leadership(1)={10}%
 \Save(1)={4}%
 %
-\renewcommand{\UnitText}{1 \UnitName equipped with: Plasmic lance}%
+\renewcommand{\UnitText}{1 \UnitName equiped with: Plasmic lance}%
 %
 % Unit weapon profiles
 %
@@ -41,7 +41,7 @@
 \AbilityName(2)={Living Lightning (Aura)}%
 \AbilityDescription(2)={At the start of the Fight phase, roll one D6 for each enemy unit within 6" of this model; on a 4+, that unit suffers 1 mortal wound.}%
 %
-\AbilityName(3)={Harbringer of Destruction}%
+\AbilityName(3)={Harbringer of Destrution}%
 \AbilityDescription(3)={At the end of your Movement phase, if this model has not Advanced or Fallen Back, you can select the nearest visible enemy unit within 18".  If you do, roll three D6s; for each dice result of 4", that unit suffers 1 mortal wound.}%
 %
 % Keywords

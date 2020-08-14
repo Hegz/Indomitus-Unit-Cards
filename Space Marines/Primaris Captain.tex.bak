@@ -14,7 +14,7 @@
 \Leadership(1)={9}%
 \Save(1)={3}%
 %
-\renewcommand{\UnitText}{1 \UnitName equipped with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4); and \AbilityName(4).}%
+\renewcommand{\UnitText}{1 \UnitName equipted with: \WeaponName(1); \WeaponName(2); \WeaponName(3); \WeaponName(4); and \AbilityName(4).}%
 %
 % Unit weapon profiles
 %

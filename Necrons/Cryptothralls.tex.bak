@@ -14,7 +14,7 @@
 \Leadership(1)={10}%
 \Save(1)={3}%
 %
-\renewcommand{\UnitText}{2 \UnitName equipped with: \WeaponName(1); \WeaponName(2).}%
+\renewcommand{\UnitText}{2 \UnitName equiped with: \WeaponName(1); \WeaponName(2).}%
 %
 % Unit weapon profiles
 %
@@ -48,7 +48,7 @@
 \AbilityDescription(4)={Enemy models cannot target a \textsc{\textbf{Cryptek}} unit from your army with a ranged weapon whilst it is within 3" of a friendly \textsc{\textbf{\UnitName}} unit.}%
 %
 \AbilityName(5)={Systematic Vigour}%
-\AbilityDescription(5)={Models in this unit change their Weapon Skill and Ballistic Skill characteristics to 3+ and their Attacks to 6 whilst this unit is within 6" of a friendly \textsc{\textbf{Cryptek}}.}%
+\AbilityDescription(5)={Models in this unit change their Weapon Skill and Balistic Skill characteristics to 3+ and their Attacks to 6 whilst this unit is within 6" of a friendly \textsc{\textbf{Cryptek}}.}%
 %
 % Keywords
 \renewcommand{\FactionKeywords}{Necrons, Canoptek, <Dynasty>}%

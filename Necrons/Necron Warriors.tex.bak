@@ -14,7 +14,7 @@
 \Leadership(1)={10}%
 \Save(1)={4}%
 %
-\renewcommand{\UnitText}{20 \UnitName equipped with: \WeaponName(1) or \WeaponName(2).}%
+\renewcommand{\UnitText}{20 \UnitName equiped with: \WeaponName(1) or \WeaponName(2).}%
 %
 % Unit weapon profiles
 %
